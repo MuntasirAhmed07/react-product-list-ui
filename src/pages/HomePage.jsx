@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getAllProducts } from '../apiRequest/apiRequest';
 import ProductList from '../components/ProductList';
+import ProductsSkeleton from '../components/ProductsSkeleton';
 import Layout from '../layouts/Layout';
 
 export const HomePage = () => {
@@ -19,14 +20,14 @@ export const HomePage = () => {
 
   useEffect(() => {
     if (productList !== null) {
-      console.log('Updated productList:', productList); // Log when productList updates
+      console.log('Updated productList:', productList);
     }
   }, [productList]);
 
   return (
     <Layout>
       {productList === null ? (
-        <p>Loading...</p>
+        <ProductsSkeleton />
       ) : (
         <ProductList list={productList} />
       )}

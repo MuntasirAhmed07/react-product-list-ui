@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Product from './Product';
+import {
+  default as CardSkeleton,
+  default as ProductsSkeleton,
+} from './ProductsSkeleton';
 
 const ProductList = (props) => {
   if (!props) {

@@ -119,9 +119,6 @@
 
   opacity: 0;
   visibility: hidden;
-  transition:
-    opacity 0.3s ease,
-    visibility 0.3s ease;
   z-index: 3;
 }
 
@@ -143,6 +140,7 @@
 
   color: #fff;
   font-size: 14px;
+  font-weight: 400;
   cursor: pointer;
   box-shadow: none;
   outline: none;
@@ -169,6 +167,12 @@
   font-size: 14px;
   color: #5a6573;
   margin-bottom: 2px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #1a2b3d;
 }
 
 .truncate-2-lines {
@@ -297,4 +301,56 @@
   .product-container {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+/*    Skeleton Anomation      */
+
+.products-skeleton-container {
+  padding: 20px;
+}
+
+.products-skeleton-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.products-skeleton-column {
+  width: 100%;
+  max-width: 20%; /* 4 columns per row on large screens */
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.products-skeleton-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.products-skeleton-image-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.products-skeleton-lottie {
+  width: 100%;
+}
+
+.products-skeleton-card-body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.products-skeleton-price-row {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
 }
