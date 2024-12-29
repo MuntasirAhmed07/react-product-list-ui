@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BaseURL = 'http://dummyjson.com';
+const BaseURL = 'https://dummyjson.com';
 
 export async function getAllProducts() {
   try {
