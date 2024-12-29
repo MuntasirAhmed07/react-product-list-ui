@@ -1,8 +1,10 @@
 import React from 'react';
 
-const Plus = () => {
+const Plus = ({ onClick, className }) => {
   return (
     <svg
+      onClick={onClick}
+      className={className}
       width="20"
       height="20"
       viewBox="0 0 20 20"
