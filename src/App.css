@@ -285,24 +285,6 @@
   align-items: center;
 }
 
-@media (max-width: 1250px) {
-  .product-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
-
-@media (max-width: 1030px) {
-  .product-container {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-@media (max-width: 650px) {
-  .product-container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 /*    Skeleton Anomation      */
 
 .products-skeleton-container {
@@ -353,4 +335,55 @@
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
+}
+
+/* Responsive  Start*/
+@media (max-width: 1250px) {
+  .product-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .products-skeleton-column {
+    max-width: 25%;
+  }
+}
+
+@media (max-width: 1030px) {
+  .product-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .products-skeleton-column {
+    max-width: 33%;
+  }
+}
+
+@media (max-width: 650px) {
+  .product-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 1250px) {
+    .product-container {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .products-skeleton-column {
+      max-width: 25%;
+    }
+  }
+
+  @media (max-width: 1030px) {
+    .product-container {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .products-skeleton-column {
+      max-width: 33%;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .product-container {
+      grid-template-columns: 1fr 1fr;
+    }
+    .products-skeleton-column {
+      max-width: 100%;
+    }
+  }
 }
