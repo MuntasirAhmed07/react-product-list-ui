@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getAllProducts } from '../apiRequest/apiRequest';
+import { getAllProducts } from '../apiRequest/ApiRequest';
 import ProductList from '../components/ProductList';
 import ProductsSkeleton from '../components/ProductsSkeleton';
 import Layout from '../layouts/Layout';
